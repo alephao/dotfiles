@@ -1,0 +1,17 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+brew "chruby"
+brew "ruby-install"
+brew "elixir"
+brew "sbcl" #lisp
+brew "exiftool" # Manipulate metadata on media files
+brew "bazel" # Build and test software
+brew "mint"
+
+cask "docker"
+cask "ngrok"
+cask "protonmail-bridge"
+cask "slack"
+cask "kap"

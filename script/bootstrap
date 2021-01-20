@@ -137,8 +137,14 @@ install_dotfiles () {
   done
 }
 
+install_apps() {
+  echo "installing apps via Homebrew."
+  brew bundle --file="$DOTFILES_ROOT/homebrew/Brewfile"
+}
+
 setup_gitconfig
 install_dotfiles
+install_apps
 
 # If we're on a Mac, let's install and setup homebrew.
 if [ "$(uname -s)" == "Darwin" ]
