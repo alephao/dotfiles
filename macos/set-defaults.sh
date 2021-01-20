@@ -1,6 +1,13 @@
 # Sets my macOS defaults.
 
 #
+# Keyboard
+#
+
+# Set a really fast key repeat.
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+#
 # Safari/WebKit
 #
 
