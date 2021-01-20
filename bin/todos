@@ -1,0 +1,6 @@
+#!/bin/sh
+# List todo items
+
+# -1 to list only file names
+# -U to order by creation date
+ls -1U ~/Desktop
