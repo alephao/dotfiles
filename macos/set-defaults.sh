@@ -1,41 +1,57 @@
-# Sets reasonable macOS defaults.
+# Sets my macOS defaults.
+
 #
-# Or, in other words, set shit how I like in macOS.
+# Safari/WebKit
 #
-# The original idea (and a couple settings) were grabbed from:
-#   https://github.com/mathiasbynens/dotfiles/blob/master/.macos
-#
-# Run ./set-defaults.sh and you'll be good to go.
 
-# Disable press-and-hold for keys in favor of key repeat.
-defaults write -g ApplePressAndHoldEnabled -bool false
+# Change the Safari search to find strings contained in other words
+defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
-# Use AirDrop over every interface. srsly this should be a default.
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
-
-# Always open everything in Finder's list view. This is important.
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
-
-# Show the ~/Library folder.
-chflags nohidden ~/Library
-
-# Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 1
-
-# Set the Finder prefs for showing a few different volumes on the Desktop.
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-
-# Run the screensaver if we're in the bottom-left hot corner.
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
-
-# Hide Safari's bookmark bar.
-defaults write com.apple.Safari ShowFavoritesBar -bool false
-
-# Set up Safari for development.
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+# Show developer tools
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Disable Webkit start page
+defaults write org.webkit.nightly.WebKit StartPageDisabled -bool true
+
+# Set Safari's home page to 'about:blank' for faster loading
+defaults write com.apple.Safari HomePage -string "about:blank"
+
+# Prevent Safari from opening 'safe' files automatically after downloading
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+# Don't fill passwords
+defaults write com.apple.Safari AutoFillPasswords -bool false
+defaults write com.apple.Safari AutoFillCreditCardData -int 0
+
+# Show full URL in Safari
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+# Show status bar
+defaults write com.apple.Safari ShowStatusBar -bool true
+defaults write com.apple.Safari ShowStatusBarInFullScreen -bool true
+
+#
+# Xcode
+#
+
+# Trim trailing whitespace
+defaults write com.apple.dt.Xcode DVTTextEditorTrimTrailingWhitespace -bool true
+
+# Trim whitespace only lines
+defaults write com.apple.dt.Xcode DVTTextEditorTrimWhitespaceOnlyLines -bool true
+
+#
+# iOS Simulator
+#
+
+# Allow full screen mode
+defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
+
+#
+# iTunes
+#
+
+defaults write com.apple.iTunes dontAutomaticallySyncIPods -bool true
