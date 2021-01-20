@@ -13,6 +13,8 @@ alias gco='git checkout'
 
 alias gclean='git clean -id'
 
+alias gd='git diff'
+
 alias gf='git fetch'
 alias gfp='git fetch --prune'
 
