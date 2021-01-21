@@ -15,6 +15,7 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 # Show developer tools
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
@@ -62,3 +63,9 @@ defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
 #
 
 defaults write com.apple.iTunes dontAutomaticallySyncIPods -bool true
+
+#
+# Airdrop
+#
+
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
