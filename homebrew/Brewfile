@@ -9,6 +9,7 @@ brew "sbcl" #lisp
 brew "exiftool" # Manipulate metadata on media files
 brew "bazel" # Build and test software
 brew "mint"
+brew "nvm"
 
 cask "docker"
 cask "ngrok"
