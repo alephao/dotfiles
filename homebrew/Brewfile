@@ -10,6 +10,8 @@ brew "exiftool" # Manipulate metadata on media files
 brew "bazel" # Build and test software
 brew "mint"
 brew "nvm"
+brew "tree"
+brew "starship" # shell prompt
 
 cask "docker"
 cask "ngrok"
