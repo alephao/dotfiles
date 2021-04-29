@@ -15,6 +15,9 @@ alias gclean='git clean -id'
 
 alias gd='git diff'
 
+alias gp='git push'
+alias gpu='git push -u origin HEAD'
+
 alias gf='git fetch'
 alias gfp='git fetch --prune'
 
